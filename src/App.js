@@ -12,8 +12,8 @@ export default function App() {
       const recevieData = await axios.get("/api/users");
       setdata(recevieData.data.users);
       statussetter(false);
-    } catch {
-      console.log("Error");
+    } catch (error) {
+      console.log(error);
       statussetter(false);
     }
   };
